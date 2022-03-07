@@ -6,15 +6,15 @@ import profile from "public/images/profile_pic.png";
 
 const AboutMe = () => {
   return (
-    // /**For Mobile View */
     <Box justifyContent="center">
+      {/**For Mobile View */}
       <Flex
         flexDirection="column-reverse"
         align="center"
         position="relative"
         display={["flex", "flex", "none", "none"]}
       >
-        <VStack align="center">
+        <VStack align="center" zIndex={-1}>
           <Box
             width="312px"
             fontFamily="Heebo"
@@ -57,11 +57,7 @@ const AboutMe = () => {
             Download Resume
           </Button>
         </VStack>
-        <Box
-          width="243px"
-          height="243px"
-          mb="34px"
-        >
+        <Box width="243px" height="243px" zIndex={-1} mb="34px">
           <Image src={profile} alt="profile" layout="responsive" />
         </Box>
       </Flex>
@@ -72,13 +68,10 @@ const AboutMe = () => {
         gap="110px"
         display={["none", "none", "flex", "flex"]}
       >
-        <VStack gap={5} align="start">
+        <VStack gap={5} align="start" zIndex={-1}>
           <Box
-            // position="absolute"
             width="506px"
             height="105px"
-            // left="148px"
-            // top="228px"
             fontFamily="Heebo"
             fontStyle="normal"
             fontWeight="bold"
@@ -89,11 +82,8 @@ const AboutMe = () => {
             Hi, I am John, Creative Technologist
           </Box>
           <Box
-            // position="absolute"
             width="497px"
             height="66px"
-            // left="148px"
-            // top="373px"
             fontFamily="Heebo"
             fontStyle="normal"
             fontWeight="normal"
@@ -106,12 +96,9 @@ const AboutMe = () => {
             veniam consequat sunt nostrud amet.
           </Box>
           <Button
-            // position="absolute"
             width="167px"
             as="button"
             height="47px"
-            // left="168px"
-            // top="486px"
             fontFamily="Heebo"
             fontStyle="normal"
             fontWeight="500"
@@ -124,13 +111,7 @@ const AboutMe = () => {
             Download Resume
           </Button>
         </VStack>
-        <Box
-          //   position="absolute"
-          width="243px"
-          height="243px"
-          //   left="760px"
-          //   top="210px"
-        >
+        <Box width="243px" height="243px" zIndex={-1}>
           <Image src={profile} alt="profile" />
         </Box>
       </Flex>
