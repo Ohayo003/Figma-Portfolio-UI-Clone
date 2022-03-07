@@ -20,7 +20,7 @@ const FeaturedData = ({
 }: IFeatureData) => {
   return (
     <Flex flexDirection="row" gap={5}>
-      <Box width=" 246px" height=" 180px" borderRadius="6px">
+      <Box width=" 246px" height=" 180px" borderRadius="6px" zIndex={-1}>
         <Image src={image} alt="designing dashboard" />
       </Box>
       <Flex flexDirection="column" gap={2}>
@@ -68,7 +68,6 @@ const FeaturedData = ({
         >
           {content}
         </Box>
-        
       </Flex>
     </Flex>
   );

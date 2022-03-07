@@ -15,7 +15,6 @@ const work = () => {
     <>
       {/**For Mobile View */}
       <Flex
-        mt={10}
         flexDirection="column"
         justify="center"
         justifyContent="center"
@@ -88,7 +87,6 @@ const work = () => {
 
       {/**For Desktop View */}
       <Flex
-        mt={10}
         flexDirection="column"
         justify="center"
         justifyContent="center"

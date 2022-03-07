@@ -12,8 +12,8 @@ const index = () => {
         justifyContent="center"
         alignItems="center"
         flexDirection="column"
+        mt={-10}
         display={["flex", "none", "none", "none"]}
-        mt={10}
       >
         <Box
           fontFamily=" Heebo"

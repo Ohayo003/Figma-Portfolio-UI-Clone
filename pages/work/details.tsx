@@ -9,6 +9,7 @@ import delivery from "public/images/delivery.png";
 const details = () => {
   return (
     <Box height="auto" mb={10}>
+      {/**For Mobile View */}
       <Flex
         display={["flex", "flex", "none", "none"]}
         flexDirection="column"
@@ -21,7 +22,6 @@ const details = () => {
           fontStyle=" normal"
           fontWeight=" bold"
           fontSize=" 30px"
-          // ml="-180px"
           width="339px"
           lineHeight=" 40px"
         >
@@ -67,7 +67,7 @@ const details = () => {
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt nostrud amet.
         </Box>
-        <Box width="339px" height="256px">
+        <Box width="339px" height="256px" zIndex={-1}>
           <Image src={dashboard} alt="dashboard" layout="responsive" />
         </Box>
         <Box
@@ -104,10 +104,10 @@ const details = () => {
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt nostrud amet.
         </Box>
-        <Box width="339px" height="256px">
+        <Box width="339px" height="256px" zIndex={-1}>
           <Image src={rCar} alt="red car" layout="responsive" />
         </Box>
-        <Box width="339px" height="256px">
+        <Box width="339px" height="256px" zIndex={-1}>
           <Image src={delivery} alt="order receipt" layout="responsive" />
         </Box>
       </Flex>
@@ -170,7 +170,7 @@ const details = () => {
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt nostrud amet.
         </Box>
-        <Box width="681px" height="460px">
+        <Box width="681px" height="460px" zIndex={-1}>
           <Image src={dashboard} alt="dashboard" />
         </Box>
         <Box
@@ -206,10 +206,10 @@ const details = () => {
           sint. Velit officia consequat duis enim velit mollit. Exercitation
           veniam consequat sunt nostrud amet.
         </Box>
-        <Box width="681px" height="460px">
+        <Box width="681px" height="460px" zIndex={-1}>
           <Image src={rCar} alt="red car" />
         </Box>
-        <Box width="681px" height="460px">
+        <Box width="681px" height="460px" zIndex={-1}>
           <Image src={delivery} alt="order receipt" />
         </Box>
       </Flex>

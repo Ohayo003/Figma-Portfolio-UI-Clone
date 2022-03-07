@@ -10,7 +10,7 @@ interface IResponsiveFeaturedData {
   content: string;
 }
 
- const ResponsiveFeaturedData = ({
+const ResponsiveFeaturedData = ({
   image,
   title,
   date,
@@ -25,7 +25,7 @@ interface IResponsiveFeaturedData {
       justifyContent="center"
       gap="2.5rem"
     >
-      <Box width=" 339px" height=" 230px" borderRadius="6px">
+      <Box width=" 339px" height=" 230px" borderRadius="6px" zIndex={-1}>
         <Image src={image} alt="designing dashboard" layout="responsive" />
       </Box>
       <Flex flexDirection="column" gap={2}>

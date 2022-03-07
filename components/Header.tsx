@@ -38,42 +38,52 @@ const Header = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Flex justify="right" justifyContent="end">
-        <Flex display={["none", "none", "flex", "flex"]}>
-          <Link passHref href="/work/">
-            <Box
-              m={5}
-              _hover={{ cursor: "pointer" }}
-              onClick={() => handleSetActiveLink("Works")}
-              color={active === "Works" ? "tomato" : "#000000"}
-            >
-              Works
+      <Box
+        position="fixed"
+        top="0"
+        overflow="hidden"
+        width="100vw"
+        height="80px"
+        display="block"
+        background="white"
+      >
+        <Flex justify="right" justifyContent="end">
+          <Flex display={["none", "none", "flex", "flex"]}>
+            <Link passHref href="/work/">
+              <Box
+                m={5}
+                _hover={{ cursor: "pointer" }}
+                onClick={() => handleSetActiveLink("Works")}
+                color={active === "Works" ? "tomato" : "#000000"}
+              >
+                Works
+              </Box>
+            </Link>
+            <Link passHref href="/blog/">
+              <Box
+                m={5}
+                _hover={{ cursor: "pointer" }}
+                onClick={() => handleSetActiveLink("Blog")}
+                color={active === "Blog" ? "tomato" : "#000000"}
+              >
+                Blog
+              </Box>
+            </Link>
+            <Box m={5} _hover={{ cursor: "pointer" }}>
+              Contact
             </Box>
-          </Link>
-          <Link passHref href="/blog/">
-            <Box
-              m={5}
-              _hover={{ cursor: "pointer" }}
-              onClick={() => handleSetActiveLink("Blog")}
-              color={active === "Blog" ? "tomato" : "#000000"}
-            >
-              Blog
-            </Box>
-          </Link>
-          <Box m={5} _hover={{ cursor: "pointer" }}>
-            Contact
-          </Box>
+          </Flex>
+          <IconButton
+            display={["flex", "flex", "none", "none"]}
+            mt={3}
+            mr={2}
+            onClick={() => setOpenMenu(true)}
+            aria-label="Open Menu"
+            size="lg"
+            icon={<HamburgerIcon />}
+          />
         </Flex>
-        <IconButton
-          display={["flex", "flex", "none", "none"]}
-          mt={3}
-          mr={2}
-          onClick={() => setOpenMenu(true)}
-          aria-label="Open Menu"
-          size="lg"
-          icon={<HamburgerIcon />}
-        />
-      </Flex>
+      </Box>
 
       {/** Open Hamburger Menu */}
       {openMenu ? (
@@ -84,7 +94,7 @@ const Header = () => {
           width="inherit"
           w="100vw"
           flexDirection="column"
-          h="50vh"
+          h="60vh"
           zIndex={20}
           top="0"
           right="0"
