@@ -26,7 +26,7 @@ const Footer = () => (
       fontFamily="Heebo"
       fontStyle="normal"
       fontWeight="normal"
-      fontSize="14px"
+      fontSize="sm"
       lineHeight="21px"
     >
       Copyright ©2020 All rights reserved

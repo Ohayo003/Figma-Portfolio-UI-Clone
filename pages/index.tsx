@@ -1,12 +1,12 @@
 import { Box, VStack } from "@chakra-ui/react";
-import AboutMe from "components/Home/AboutMe";
-import FeaturedWorks from "components/Home/FeaturedWorks";
-import RecentPost from "components/Home/RecentPost";
+import AboutMe from "components/Home/ProfileContainer";
+import FeaturedWorks from "components/Home/FeaturedWorkContainer";
+import RecentPost from "components/Home/RecentPostContainer";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <Box height="auto" width="100vw">
+    <Box height="auto" width="full" maxW="full">
       <AboutMe />
       <RecentPost />
       <FeaturedWorks />

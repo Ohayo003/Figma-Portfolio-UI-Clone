@@ -1,123 +1,101 @@
-import { Box, Center, Flex } from "@chakra-ui/react";
-import BlogPosts from "components/Blog/BlogPosts";
+import { Box, Center, Flex, Divider, VStack } from "@chakra-ui/react";
 import React from "react";
 import "@fontsource/heebo";
-import ResponsiveBlogPost from "components/Blog/ResponsiveBlogPost";
+import Recent from "components/Blogs/BlogPost";
+import BlogPost from "components/Blogs/BlogPost";
+import { FaCentercode } from "react-icons/fa";
 
 const index = () => {
   return (
-    <>
-      <Flex
-        justify="center"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        mt={-10}
-        display={["flex", "none", "none", "none"]}
-      >
-        <Box
-          fontFamily=" Heebo"
-          fontStyle=" normal"
-          fontWeight=" 700"
-          fontSize=" 30px"
-          width="320px"
-          ml={-5}
-          lineHeight=" 60px"
-          color="text.dark"
-          textAlign="left"
-        >
-          Blogs
-        </Box>
-        <ResponsiveBlogPost
-          title={"UI Interactions of the week"}
-          date={"12 Feb 2019"}
-          content={
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          }
-          category={"Express, Handlebars"}
-        />
-        <ResponsiveBlogPost
-          title={"UI Interactions of the week"}
-          date={"12 Feb 2019"}
-          content={
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          }
-          category={"Express, Handlebars"}
-        />
-        <ResponsiveBlogPost
-          title={"UI Interactions of the week"}
-          date={"12 Feb 2019"}
-          content={
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          }
-          category={"Express, Handlebars"}
-        />
-        <ResponsiveBlogPost
-          title={"UI Interactions of the week"}
-          date={"12 Feb 2019"}
-          content={
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          }
-          category={"Express, Handlebars"}
-        />
-      </Flex>
-
-      {/**For Desktop View */}
-      <Flex
-        justify="center"
-        justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
-        display={["none", "flex ", "flex", "flex"]}
-        mt={10}
-      >
-        <Center>
+    <Box pr={4} pl={4} mt={{ lg: 28, base: 6 }}>
+      <Center>
+        <VStack>
           <Box
             fontFamily=" Heebo"
             fontStyle=" normal"
-            fontWeight=" bold"
-            fontSize=" 44px"
+            fontWeight=" 700"
+            fontSize={{ lg: "2.75rem", base: "1.875rem" }}
+            width={{ lg: "9.75em", base: "3.875rem" }}
             lineHeight=" 60px"
             color="text.dark"
-            width="690px"
+            alignSelf="start"
+            mb={4}
           >
-            Blogs
+            Blog
           </Box>
-        </Center>
-        <BlogPosts
-          title={"UI Interactions of the week"}
-          date={"12 Feb 2019"}
-          content={
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          }
-          category={"Express, Handlebars"}
-        />
-        <BlogPosts
-          title={"UI Interactions of the week"}
-          date={"12 Feb 2019"}
-          content={
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          }
-          category={"Express, Handlebars"}
-        />
-        <BlogPosts
-          title={"UI Interactions of the week"}
-          date={"12 Feb 2019"}
-          content={
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          }
-          category={"Express, Handlebars"}
-        />
-        <BlogPosts
-          title={"UI Interactions of the week"}
-          date={"12 Feb 2019"}
-          content={
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
-          }
-          category={"Express, Handlebars"}
-        />
-      </Flex>
-    </>
+          {/* <VStack> */}
+          <BlogPost
+            title={"UI Interactions of the week"}
+            date={"12 Feb 2020"}
+            content={
+              "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+            }
+            category={"Design, Pattern"}
+            isBlogPage={true}
+          />
+          <Box
+            pb={{ lg: 8, base: 5 }}
+            pt={{ lg: 10, base: 6 }}
+            width={{ lg: "42.625rem", base: "21.188rem" }}
+            m={["0 !important"]}
+          >
+            <Divider orientation="horizontal" borderColor="divider.light" />
+          </Box>
+          <BlogPost
+            isBlogPage={true}
+            title={"UI Interactions of the week"}
+            date={"12 Feb 2020"}
+            content={
+              "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+            }
+            category={"Design, Pattern"}
+          />
+          <Box
+            pb={{ lg: 8, base: 5 }}
+            pt={{ lg: 4, base: 6 }}
+            width={{ lg: "42.625rem", base: "21.188rem" }}
+            m={["0 !important"]}
+          >
+            <Divider orientation="horizontal" borderColor="divider.light" />
+          </Box>
+          <BlogPost
+            isBlogPage={true}
+            title={"UI Interactions of the week"}
+            date={"12 Feb 2020"}
+            content={
+              "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+            }
+            category={"Design, Pattern"}
+          />
+          <Box
+            pb={{ lg: 8, base: 5 }}
+            pt={{ lg: 10, base: 6 }}
+            width={{ lg: "42.625rem", base: "21.188rem" }}
+            m={["0 !important"]}
+          >
+            <Divider orientation="horizontal" borderColor="divider.light" />
+          </Box>
+          <BlogPost
+            isBlogPage={true}
+            title={"UI Interactions of the week"}
+            date={"12 Feb 2020"}
+            content={
+              "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+            }
+            category={"Design, Pattern"}
+          />
+          <Box
+            pb={{ lg: 8, base: 5 }}
+            pt={{ lg: 10, base: 6 }}
+            width={{ lg: "42.625rem", base: "21.188rem" }}
+            m={["0 !important"]}
+          >
+            <Divider orientation="horizontal" borderColor="divider.light" />
+          </Box>
+          {/* </VStack> */}
+        </VStack>
+      </Center>
+    </Box>
   );
 };
 

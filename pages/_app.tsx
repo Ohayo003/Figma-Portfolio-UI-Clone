@@ -19,6 +19,10 @@ const customTheme = extendTheme({
       white: "#FFFFFF",
       secondary: "#00A8CC",
     },
+    divider: {
+      dark: "#00000",
+      light: "#E0E0E0",
+    },
     container: {
       default: "#FFFFFF",
       light: "#EDF7FA",

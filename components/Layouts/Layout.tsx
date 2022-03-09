@@ -9,8 +9,8 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
   return (
-    <Box width="100vw" height="100%" position="absolute">
-      <Grid templateRows="20vh auto 20vh">
+    <Box width="full" height="full" position="absolute">
+      <Grid templateRows="3.125rem auto 11.375rem">
         <Header />
         {children}
         <Footer />
